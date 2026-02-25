@@ -1,6 +1,6 @@
 :root {
     --primary: #fdb927;
-    --secondary: #552583;
+    --secondary: #07476d;
     --dark: #1a1a1a;
     --white: #ffffff;
     --gray: #f4f4f4;
@@ -102,7 +102,6 @@ nav ul li a.active {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
 
-/* Podstránky Header */
 .sub-header {
     background: var(--secondary);
     color: var(--primary);
@@ -117,7 +116,6 @@ nav ul li a.active {
     margin: 40px auto;
 }
 
-/* O klube layout */
 .about-flex {
     display: flex;
     gap: 40px;
@@ -141,7 +139,6 @@ nav ul li a.active {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
-/* Tabuľka */
 .table-responsive {
     background: white;
     border-radius: 10px;
@@ -167,7 +164,6 @@ td {
     border-bottom: 1px solid #ddd;
 }
 
-/* Novinky */
 .news-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -205,4 +201,21 @@ footer {
     .hero-text h1 {
         font-size: 2.5rem;
     }
+}
+.logo{
+    max-width: 250px;
+    width: 100%;
+    height: auto;
+}
+.h_2{
+    padding: 10px;
+}
+
+#obrazokSlider {
+    transition: opacity 0.3s ease-in-out;
+    opacity: 1;
+}
+
+#obrazokSlider.hidden {
+    opacity: 0;
 }
