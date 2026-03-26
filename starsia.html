@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zápasy - Sun Lakers</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <div class="logo">SUN <span>LAKERS</span></div>
+        <div class="menu__">
+            <div class="menu">
+                <h2 class="menu-title">
+                    <span class="hamburger"></span>
+                    Menu
+                </h2>
+                <ul class="menu-dropdown">
+            <li><a href="index.html" >Domov</a></li>
+            <li><a href="zapasy.html" class="active">Zápasy</a></li>
+            <li><a href="nabor.html">Nábor</a></li>
+            <li><a href="2_per.html">2% z dane</a></li>
+            <li><a href="https://clubzone.sk/dashboard" >ClubZone</a></li>
+                </ul>
+            </div>
+        </div> 
+    </nav>
+
+    <section class="sub-header">
+        <h1>Program a Výsledky</h1>
+    </section>
+
+    <div class="container">
+        <div id="loader">Načítavam aktuálne dáta zo SZFB...</div>
+        <div class="table-responsive">
+            <table id="matches-table" style="display:none;">
+                <thead>
+                    <tr>
+                        <th>Dátum</th>
+                        <th>Zápas</th>
+                        <th>Výsledok / Čas</th>
+                        <th>Miesto konania</th>
+                    </tr>
+                </thead>
+                <tbody id="matches-body"></tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

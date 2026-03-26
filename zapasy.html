@@ -3,40 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zápasy - Sun Lakers</title>
+    <title>Školský Portál</title>
     <link rel="stylesheet" href="style.css">
+
 </head>
 <body>
-    <nav>
-        <div class="logo">SUN <span>LAKERS</span></div>
-        <ul>
-            <li><a href="index.html">Domov</a></li>
-            <li><a href="zapasy.html" class="active">Zápasy</a></li>
-            <li><a href="klub.html">O klube</a></li>
-        </ul>
-    </nav>
-
-    <section class="sub-header">
-        <h1>Program a Výsledky</h1>
-    </section>
-
-    <div class="container">
-        <div id="loader">Načítavam aktuálne dáta zo SZFB...</div>
-        <div class="table-responsive">
-            <table id="matches-table" style="display:none;">
-                <thead>
-                    <tr>
-                        <th>Dátum</th>
-                        <th>Zápas</th>
-                        <th>Výsledok / Čas</th>
-                        <th>Miesto konania</th>
-                    </tr>
-                </thead>
-                <tbody id="matches-body"></tbody>
-            </table>
+    <div class="body_">
+        <div class="container_">
+            <button class="btn starsi"><a href="starsia.html">Starší žiaci</a></button>
+            <button class="btn mladsi"><a href="mladsia.html">Mladší žiaci</a></button>
+            <button class="btn naj_mladsi"><a href="naj_mladsi.html">staršia prípravka</a></button>
         </div>
     </div>
-
-    <script src="script.js"></script>
 </body>
 </html>

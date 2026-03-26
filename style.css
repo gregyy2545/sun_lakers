@@ -1,7 +1,7 @@
 :root {
     --primary: #fdb927;
     --secondary: #07476d;
-    --dark: #1a1a1a;
+    --dark: #000000;
     --white: #ffffff;
     --gray: #f4f4f4;
 }
@@ -97,7 +97,7 @@ nav ul li a.active {
     width: 100%;
     border-radius: 15px;
     border: 3px solid var(--primary);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 10px 30px rgba(252, 194, 3, 0.753);
 }
 
 .sub-header {
@@ -119,6 +119,8 @@ nav ul li a.active {
     gap: 40px;
     align-items: center;
     flex-wrap: wrap;
+    flex-direction: column;
+    
 }
 
 .about-text {
@@ -129,6 +131,8 @@ nav ul li a.active {
 .about-image {
     flex: 1;
     min-width: 300px;
+    max-width: 70%;
+    height: auto;
 }
 
 .about-image img {
@@ -234,7 +238,8 @@ footer {
             justify-content: center;
             align-items: center;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #747474 0%, #ffffff 100%);
+            background-image: url(img/stock-photo-low-key-photography-of-a-shooting-floorball-player-1071855230.jpg);
+
         }
 
         .container_{
@@ -249,34 +254,31 @@ footer {
             font-weight: bold;
             text-transform: uppercase;
             border: none;
-            border-radius: 50px; 
             cursor: pointer;
             color: rgb(0, 0, 0);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+            box-shadow: 0 30px 20px rgba(0,0,0,0.15);
             transition: all 0.3s ease;
             outline: none;
-        }
-        .starsi {
-
-        }
-        .mladsi {
-
+            border: #000 1px solid;
         }
         .starsi:hover {
-            background: #ffa600;
+            background: #001369;
             transform: translateY(-5px);
             box-shadow: 0 15px 25px rgba(0,0,0,0.25);
+            border-radius: 50px; 
         }
 
         .mladsi:hover {
-            background: #fdb927;
+            background: #1900f7;
             transform: translateY(-5px);
             box-shadow: 0 15px 25px rgba(0,0,0,0.25);
+            border-radius: 50px; 
         }
         .naj_mladsi:hover {
-            background: #ffd987;
+            background: #008cff;
             transform: translateY(-5px);
             box-shadow: 0 15px 25px rgba(0,0,0,0.25);
+            border-radius: 50px; 
         }
 
         .btn:active {
@@ -289,4 +291,185 @@ a {
   text-decoration: none;
   color: inherit;
   display: block;
+}
+.h_1{
+    margin: 40px;
+    display: flex;
+    justify-content: center;
+}
+.nabor{
+    display: flex;
+    margin-left: 20%;
+    max-width: 60%;
+    height: auto;
+}
+.menu {
+  position: relative;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.menu-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 40px;
+  background: #000;
+  text-align: center;
+  color: #ffffff;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: 0.3s background-color;
+  position: relative;
+}
+
+.menu-title:before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  width: 0;
+  height: 0;
+  border-top: 5px solid #000;
+  border-left: 75px solid transparent;
+  border-right: 75px solid transparent;
+  z-index: 101;
+  transition: 0.2s 0.2s border-top-width ease-out, 0.3s border-top-color;
+}
+
+.menu-title:hover {
+  background: #000;
+}
+
+.menu-title:hover:before {
+  border-top-color: #000;
+}
+
+.menu:hover > .menu-title:before {
+  border-top-width: 0;
+}
+
+
+.menu-title:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  width: 0;
+  height: 0;
+  border-left: 75px solid transparent;
+  border-right: 75px solid transparent;
+  border-bottom: 0 solid #ebebeb;
+  z-index: 101;
+  transition: 0.2s border-bottom-width ease-in;
+}
+
+.menu:hover > .menu-title:after {
+  border-bottom-width: 5px;
+}
+
+.menu-dropdown {
+  min-width: 100%;
+  position: absolute;
+  right: 0; 
+  left: auto;
+  background: #ebebeb;
+  z-index: 100;
+  transition: 0.5s padding, 0.5s background-color;
+  padding: 15px 0;
+}
+
+.menu-dropdown:after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  width: 0;
+  height: 0;
+  border-top: 5px solid #ebebeb;
+  border-left: 75px solid transparent;
+  border-right: 75px solid transparent;
+  z-index: 101;
+  transition: 0.5s border-top-color;
+}
+
+.menu:not(:hover) > .menu-dropdown {
+  padding: 4px 0;
+  background: #dddddd;
+  z-index: 99;
+}
+
+.menu:not(:hover) > .menu-dropdown:after {
+  border-top-color: #dddddd;
+}
+
+.menu-dropdown > li {
+  overflow: hidden;
+  height: 30px;
+  padding: 5px 15px;
+  white-space: nowrap;
+  transition: 0.5s all cubic-bezier(0.73, 0.32, 0.34, 1.5);
+}
+
+.menu-dropdown > li:hover {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.menu:not(:hover) > .menu-dropdown > li {
+  visibility: hidden;
+  height: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+  color: rgba(0, 0, 0, 0);
+}
+.menu__{
+    width: fit-content;
+}
+.hamburger {
+  width: 18px;
+  height: 2px;
+  background: #fff;
+  display: block;
+  position: relative;
+  margin-right: 10px;
+}
+
+.hamburger:before,
+.hamburger:after {
+  content: "";
+  width: 18px;
+  height: 2px;
+  background: #fff;
+  position: absolute;
+  left: 0;
+}
+
+.hamburger:before {
+  top: -6px;
+}
+
+.hamburger:after {
+  bottom: -6px;
+}
+.menu-dropdown li a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    color: inherit;
+    text-decoration: none;
+}
+.menu-dropdown {
+    display: block;
+}
+
+.menu-dropdown > li {
+    display: block;
+    width: 100%;
 }
