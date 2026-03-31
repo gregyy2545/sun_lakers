@@ -1,0 +1,133 @@
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: #f0f2f5;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    margin: 0;
+}
+
+
+form {
+    background: #ffffff;
+    max-width: 550px;
+    width: 100%;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+}
+
+h2 {
+    color: #1a2a6c;
+    text-align: center;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+
+fieldset {
+    border: 2px solid #e1e8ed;
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 8px;
+    transition: border-color 0.3s ease;
+}
+
+fieldset:hover {
+    border-color: #001369;
+}
+
+legend {
+    font-weight: bold;
+    color: #001369;
+    padding: 0 10px;
+    font-size: 1.1em;
+}
+
+
+label {
+    display: block;
+    margin-top: 15px;
+    font-weight: 600;
+    color: #333;
+}
+
+input[type="text"], 
+input[type="email"], 
+input[type="date"], 
+input[type="tel"], 
+select {
+    width: 100%;
+    padding: 12px;
+    margin-top: 5px;
+    border: 1px solid #ccd0d5;
+    border-radius: 6px;
+    box-sizing: border-box;
+    font-size: 15px;
+    outline: none;
+}
+
+input:focus, select:focus {
+    border-color: #1a2a6c;
+    box-shadow: 0 0 5px rgba(26, 42, 108, 0.2);
+}
+
+
+.checkbox-group {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+.checkbox-group input {
+    margin-top: 5px;
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+}
+
+.checkbox-group label {
+    margin-top: 0;
+    font-weight: normal;
+    font-size: 0.9em;
+    color: #555;
+    cursor: pointer;
+}
+
+
+button {
+    background: linear-gradient(to right, #1900ff, #001369);
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 25px;
+    transition: transform 0.2s, background 0.3s;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(211, 84, 0, 0.3);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+@media (max-width: 480px) {
+    form {
+        padding: 15px;
+    }
+    fieldset {
+        padding: 10px;
+    }
+}
