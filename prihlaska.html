@@ -1,0 +1,59 @@
+
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prihláška do florbalového klubu</title>
+    <link rel="stylesheet" href="style_.css">
+</head>
+<body>
+
+    <form action="https://formspree.io/f/xreokooz" method="POST">
+        <h2>Registrácia do florbalového klubu</h2>
+
+        <fieldset>
+            <legend>Údaje o dieťati</legend>
+            
+            <label for="meno_dieta">Meno a priezvisko dieťaťa:</label>
+            <input type="text" id="meno_dieta" name="meno_dieta" required>
+
+            <label for="datum_narodenia">Dátum narodenia:</label>
+            <input type="date" id="datum_narodenia" name="datum_narodenia" required>
+
+            <label for="skusenosti">Skúsenosti s florbalom:</label>
+            <select id="skusenosti" name="skusenosti">
+                <option value="zaciatocnik">Úplný začiatočník</option>
+                <option value="mierne_pokrocily">Už hral (škola/krúžok)</option>
+                <option value="pokrocily">Aktívny hráč</option>
+            </select>
+        </fieldset>
+
+        <fieldset>
+            <legend>Zákonný zástupca</legend>
+            
+            <label for="meno_rodic">Meno a priezvisko rodiča:</label>
+            <input type="text" id="meno_rodic" name="meno_rodic" required>
+
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" placeholder="napr. meno@email.sk" required>
+
+            <label for="telefon">Telefónne číslo:</label>
+            <input type="tel" id="telefon" name="telefon" placeholder="+421 9xx xxx xxx" required>
+        </fieldset>
+
+        <div class="checkbox-group">
+            <input type="checkbox" id="gdpr" name="gdpr" required>
+            <label for="gdpr">Súhlasím so spracovaním osobných údajov (GDPR).</label>
+        </div>
+
+        <div class="checkbox-group">
+            <input type="checkbox" id="foto" name="foto">
+            <label for="foto">Súhlasím s fotením dieťaťa na účely propagácie klubu.</label>
+        </div>
+
+        <button type="submit">Odoslať prihlášku</button>
+    </form>
+
+</body>
+</html>
