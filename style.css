@@ -491,3 +491,11 @@ a {
     transition: all 0.3s;
     box-shadow: 0 30px 20px rgba(0,0,0,0.15);
 }
+._per{
+    display: flex;
+    margin-top: 10%;
+    margin-left: 20%;
+    max-width: 60%;
+    height: auto;
+    border-radius: 20px;
+}
